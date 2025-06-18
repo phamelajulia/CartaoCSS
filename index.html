@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css">
+    <title>Cartão de Visita</title>
+    
+    <header>
+    <style>
+
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #EAEDED;
+            font-family: Arial, sans-serif;
+        }
+
+       
+        .giroCartao {
+            width: 500px;
+            height: 300px;
+            perspective: 1000px; 
+        }
+
+        #box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin-left: -100px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+        }
+
+        .giroCartao:hover #box {
+            transform: rotateX(180deg); 
+        }
+
+        .frente, .verso {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; 
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .frente {
+            background: rgb(197, 20, 185);
+            background: linear-gradient(90deg, rgba(236, 37, 213, 0.678) 0%, rgb(241, 64, 170) 100%);  
+        }
+
+        .verso {
+            
+            color: purple;
+            background: rgb(197, 20, 185);
+            background: linear-gradient(90deg, rgb(236, 37, 213 ,0.678) 0%, rgb(241, 64, 170) 40%); 
+            transform: rotateX(180deg); 
+        }
+
+        .img-moldura{
+            width: 190px; 
+            height: 290px; 
+            border-radius: 50%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-bottom: -110px;
+            margin: -10px;
+            margin-top: 10px;
+            margin-left: -15px;
+            
+        }
+
+        .img {
+            width: 125px;
+            height: 115px;
+            border-radius: 50%;
+            border: 2px solid #9b118ded;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: -40px;
+            margin-left: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: purple;
+        }
+
+        .profissao {
+            font-size: 16px;
+            margin: 3px 0;
+            font-family:'Times New Roman', Times, serif;
+            color: purple
+        }
+
+       
+
+
+        
+        .github-container{
+            position: relative;
+            margin: 0px;
+            width: 100px;
+            height: 95px;
+        
+            
+        }
+
+        .github{
+            width: 150px;
+            height: 150px;
+            margin-top: -65px;
+            margin-left: -55px;
+            top: -500px;
+         
+        }
+
+       
+        .github-text{
+            position: relative;
+            top: -36px;
+            left: -15px;
+            color: purple;
+            font-size: 13px;
+       }
+
+        .email-container{
+            margin: 0px;
+            width: 65px;
+            height: 70px;
+            position: relative;
+            
+        }
+
+        .email{
+            margin: 0px;
+            width: 100px;
+            height: 97px;
+            top: -150px;
+            left: 90px;
+            position: relative;
+        }
+
+        .email-text{
+            position: relative;
+            top: -154px;
+            left: 75px;
+            color: purple;
+            font-size: 10px;
+        }
+
+        .insta-container{
+            margin: 0px;
+            width: 65px;
+            height: 70px;
+            position: relative;
+            
+        }
+
+
+       .insta{
+            margin: 0px;
+            width: 113px;
+            height: 110px;
+            top: -238px;
+            left: 208px;
+            position: relative;
+            
+             
+        }
+
+        .insta-text{
+            position: relative;
+            top: -258px;
+            left: 225px;
+            color: purple;
+            font-size: 13px;
+            
+        }
+
+
+        .telefone-container{
+            margin: 0px;
+            width: 65px;
+            height: 70px;
+            position: relative;
+            
+        }
+
+
+       .telefone{
+            margin: 0px;
+            width: 113px;
+            height: 110px;
+            top: -330px;
+            left: 330px;
+            position: relative;
+        }
+
+        .telefone-text{
+            position: relative;
+            top: -342px;
+            left: 348px;
+            color: purple;
+            font-size: 12px;
+        }
+
+        .borda{
+            position: relative;
+            margin: 0px;
+            margin-top: 0px;
+            width: 495px;
+            height: 294px;
+            top: 185px;
+            opacity: 0.2;
+
+        }
+
+
+        
+        .rodape{
+            position: relative;
+            margin: 0px;
+           margin-top: 400px;
+           margin-left: -450px;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            
+        }
+        
+        
+        .github:hover, .email:hover, .insta:hover, .telefone:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</header>
+</head>
+<body>
+   
+<main>
+
+<div class="giroCartao"> 
+
+    <div id="box">
+
+        <div class="frente"> 
+            <figure>
+                <img src="phamelaJulia.jpeg" class="img" alt="Foto da Phamela Julia">   
+            </figure>
+
+            <h2>Phamela Julia Sena da Silva</h2>
+           <footer> <p class="profissao">Direito</p></footer>
+           
+            
+        </div>  
+        
+        <div class="verso">
+        <aside>
+        <nav>  
+            <div class="nome">Phamela Julia </div>
+
+      <div class="profissao">Profissão: Direito</div>
+
+      <div class="info">Contato: (85) 98787-5093</div>
+
+      <div class="info">phamela.silva08@aluno.ifce.edu.br</div>
+      
+      <div class="footer">entre em contato comigo:</div>
+      <div class="footer">
+        <a href="https://github.com/phamelajulia" target="_blank">Github</a> |
+        <a href="https://www.instagram.com/_phamela_slv"target="_blank">Instagram</a>
+
+            
+                 </nav>
+                </aside>
+        </div>
+
+    </div>
+</div>
+</main>
+
+<footer class="rodape">Obs:Pasee o mause encima do cartão para mais informações!!.<br>&copy; Phamela Silva, 2025.</footer>
+
+
+</body>
+</html>
